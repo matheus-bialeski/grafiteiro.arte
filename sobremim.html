@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOBRE MIM</title>
+  <link rel="icon" type="image/png" href="./img/Agrupar 123.png" />
+  <link rel="stylesheet" href="sobre.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="principal.html">HOME</a></li>
+        <li><a href="artes.html">MINHAS ARTES</a></li>
+        <li><a href="contato.html">CONTATO</a></li>
+      </ul>
+    </nav>
+    <div class="social-links">
+      <a href="https://www.behance.com/mbialeski" aria-label="Behance" target="_blank">
+        <i class="fab fa-behance"></i>
+      </a>
+      <a href="https://www.instagram.com/mbialeski?igsh=MTBqMjFraWhhNnc4Zw==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </header>
+
+  <div class="separadorheader"></div>
+
+  <section class="intro">
+    <div class="designer">
+      <h1>GRAFITEIRO</h1>
+      <p><strong>Matheus Bialeski</strong>, 27 anos, natural de Araucária-PR. <i>Grafiteiro por essência</i>, Designer por paixão e profissão. Transformo muros em telas e ideias em arte.</p>
+    </div>
+    <div class="image-center">
+      <img src="./img/Agrupar 2 (1).png" alt="Grafiteiro Libertário">
+    </div>
+    <div class="coder">
+      <h1>&lt;LIBERTÁRIO&gt;</h1>
+      <p>Minha arte é mais que estética, é uma voz. Cada mural é um manifesto, cada cor carrega uma mensagem. Eu busco a ponte entre a liberdade de expressão e o poder transformador da arte de rua.</p>
+    </div>
+  </section>
+
+  <div class="separator"></div>
+
+  <section class="work">
+    <h2>M I N H A S &nbsp;&nbsp; C O S T U M I Z A Ç Õ E S </h2>
+    <div class="work-grid">
+      <div class="work-item">
+        <img src="./img/SKATE.png" alt="">
+      </div>
+      <div class="work-item">
+        <img src="./img/TENIS.png" alt="">
+      </div>
+      <div class="work-item">
+        <img src="./img/MANEQUIM.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <div id="container">
+    <h1> F A Ç A &nbsp;&nbsp;S U A <br> C U S T U M I Z A Ç Ã O</h1>
+    <div class="underline"></div>
+
+    <form action="https://formsubmit.co/nycolas.nada@outlook.com" method="POST" id="contact_form">
+      <input type="hidden" name="_next" value="https://seusite.com/obrigado"> <!-- Redireciona após envio -->
+      <input type="hidden" name="_subject" value="Novo contato pelo portfólio">
+      <input type="hidden" name="_captcha" value="false">
+
+      <div class="name">
+        <label for="name"></label>
+        <input type="text" placeholder="MEU NOME É" name="name" id="name_input" required>
+      </div>
+      <div class="email">
+        <label for="email"></label>
+        <input type="email" placeholder="MEU E-MAIL É" name="email" id="email_input" required>
+      </div>
+      <div class="telephone">
+        <label for="telephone"></label>
+        <input type="text" placeholder="MEU NUMERO É" name="telephone" id="telephone_input" required>
+      </div>
+      <div class="subject">
+        <label for="medidas"></label>
+        <input type="text" placeholder="MEDIDAS DO ESPAÇO (Altura e Largura)" name="medidas" id="medidas_input" required>
+      </div>
+      <div class="address">
+        <label for="address">ITEM A SER CUSTIMIZADO</label>
+        <div class="custom-dropdown">
+          <select id="address_input" name="address" required>
+            <option value="" disabled selected>Escolha um item</option>
+            <option value="jaqueta_jeans">Jaqueta Jeans</option>
+            <option value="tenis">Tênis</option>
+            <option value="malas">Malas</option>
+            <option value="camisas">Camisas</option>
+            <option value="outros">Outros</option>
+          </select>
+          <div class="other-input">
+            <input type="text" id="other_item" name="other_item" placeholder="Digite o item" />
+          </div>
+        </div>
+      </div>
+
+      <div class="message">
+        <label for="message"></label>
+        <textarea name="message" placeholder="COLOQUE SUAS IDEIAS AQUI JUNTO AS SUAS REFERÊNCIAS" id="message_input" cols="30" rows="5" required></textarea>
+      </div>
+      <div class="submit">
+        <input type="submit" value="Enviar Mensagem" id="form_button" />
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Script para mostrar campo de "outros" quando a opção for selecionada
+    const selectInput = document.getElementById('address_input');
+    const otherInputDiv = document.querySelector('.other-input');
+
+    selectInput.addEventListener('change', function() {
+      if (selectInput.value === 'outros') {
+        otherInputDiv.style.display = 'block';
+      } else {
+        otherInputDiv.style.display = 'none';
+      }
+    });
+  </script>
+
+  <footer>
+    <p>&copy; 2024&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M a t h e u s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B i a l e s k i </p>
+  </footer>
+</body>
+</html>

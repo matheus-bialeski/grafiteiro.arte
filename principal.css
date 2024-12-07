@@ -1,0 +1,587 @@
+/* Geral */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #d66e6e;
+    background: #ffffff;
+    background-image: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    font-size: 13px;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.imagem {
+  mix-blend-mode: multiply; /* Combina a imagem com o fundo */
+  clip-path: inset(5px); /* Ajusta os valores para "recortar" bordas */
+
+}
+
+
+
+
+header {
+  background: url('./img/Prancheta_2-removebg-preview.png') no-repeat center center; /* Centraliza a imagem */
+  
+  background-size: contain; /* Faz a imagem cobrir o header proporcionalmente */
+  width: 100%; /* Ocupa toda a largura da tela */
+  height: 100px; /* Altura fixa do header */
+  color: #333; /* Cor do texto */
+  padding: 10px 20px; /* Padding interno */
+  text-align: left; /* Alinha o conteúdo à esquerda */
+  position: relative;
+  display: flex;
+  justify-content: space-between; /* Distribui os itens */
+  align-items: center; /* Centraliza os itens verticalmente */
+  box-sizing: border-box; /* Inclui padding na largura e altura */
+}
+
+
+
+
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #d66e6e;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  z-index: 1;
+}
+
+nav a {
+  color: #d66e6e;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  color: #e76060;
+  
+}
+
+.imagem {
+  width: 10px;
+  height: 10px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('img/1500x600.png') no-repeat center center/cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    margin-top: 60px;
+    position: relative;
+    transition: transform 0.5s, filter 0.5s;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.imagenspar {
+  display: flex;
+  justify-content: center; /* Centraliza as imagens horizontalmente */
+  gap: 50px; /* Espaço entre as imagens */
+  margin-top: 100px; /* Distância do título */
+}
+
+.imagenspar img {
+  max-width: 600px; /* Ajuste o tamanho das imagens */
+  height: 200px;
+  border-radius: 8px; /* Bordas arredondadas, opcional */
+}
+
+.h2par {
+  text-align: center;
+  margin-top: 50px; /* Ajuste conforme necessário */
+  color: #d85d5d;
+  font-size: 2em; /* Ajuste do tamanho do título */
+}
+
+.parceiro p {
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+  font-size: 15px;
+}
+
+
+
+.parceiro p:hover {
+  color: #d85d5d;
+  transition: 1.5s  linear;
+  cursor: pointer;
+  
+}
+
+@keyframes shadowMove {
+  0% {
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.parceiro p {
+  font-size: 2em;
+  animation: shadowMove 2s infinite alternate;
+}
+
+
+
+
+.MAA {
+  text-align: center;
+  
+  color: #d85d5d;
+  margin-top: 240px;
+
+}
+
+.hero:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Conteúdo */
+.content {
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 80px;
+}
+
+.art-carousel {
+    margin-top: 50px;
+}
+
+.slick-slide {
+    margin: 0 10px;
+}
+
+.slick-prev, .slick-next {
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Cartão de Arte */
+.art-card {
+    
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px solid black
+    
+   
+}
+
+.art-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.art-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.art-card .description {
+    margin-top: 15px;
+    text-align: center;
+    
+}
+
+.art-card .description h3 {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.art-card .description p {
+    font-size: 1em;
+    color: #666;
+}
+
+
+html {
+  font-family: 'Montserrat', Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Escondendo o botão padrão do input[type=file] */
+.image input[type="file"] {
+    display: none;
+}
+
+/* Estilizando o botão de envio de arquivo */
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #F2F3EB;
+    color: #d66e6e;
+    font-size: 1em;
+    font-weight: bold;
+    
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-file-upload:hover {
+    
+    color: #474544;
+}
+
+/* Exibindo o nome do arquivo escolhido */
+#file-name {
+    display: block;
+    margin-top: 10px;
+    color: #474544;
+    font-size: 0.9em;
+}
+
+
+body {
+  background: #F2F3EB;
+}
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, input, select, textarea {
+  color: #5A5A5A;
+  font: inherit;
+  margin: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+textarea {
+  overflow: auto;
+}
+
+#container {
+  
+  max-width: 768px;
+  margin: 60px auto;
+  position: relative;
+}
+
+form {
+  padding: 37.5px;
+  margin: 50px 0;
+}
+
+h1 {
+  color: #474544;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 7px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.underline {
+  border-bottom: solid 2px #474544;
+  margin: -0.512em auto;
+  width: 80px;
+}
+
+.icon_wrapper {
+  margin: 50px auto 0;
+  width: 100%;
+}
+
+.icon {
+  display: block;
+  fill: #474544;
+  height: 50px;
+  margin: 0 auto;
+  width: 50px;
+}
+
+.email {
+	float: right;
+	width: 45%;
+}
+
+input[type='text'], [type='email'], select, textarea {
+	background: none;
+  border: none;
+	border-bottom: solid 2px #474544;
+	color: #474544;
+	font-size: 1.000em;
+  font-weight: 400;
+  letter-spacing: 1px;
+	margin: 0em 0 1.875em 0;
+	padding: 0 0 0.875em 0;
+  text-transform: uppercase;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+input[type='text']:focus, [type='email']:focus, textarea:focus {
+	outline: none;
+	padding: 0 0 0.875em 0;
+}
+
+.message {
+	float: none;
+}
+
+.name {
+	float: left;
+	width: 45%;
+}
+
+select {
+  background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.subject {
+  width: 100%;
+}
+
+.telephone {
+  width: 100%;
+}
+
+textarea {
+	line-height: 150%;
+	height: 150px;
+	resize: none;
+  width: 100%;
+}
+
+::-webkit-input-placeholder {
+	color: #474544;
+}
+
+:-moz-placeholder { 
+	color: #474544;
+	opacity: 1;
+}
+
+::-moz-placeholder {
+	color: #474544;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	color: #474544;
+}
+
+#form_button {
+    background: none;
+    border: none; /* Removendo a borda */
+    color: #fa7777;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 0.875em;
+    font-weight: bold;
+    outline: none;
+    padding: 20px 35px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+
+
+
+@media screen and (max-width: 768px) {
+  #container {
+    margin: 20px auto;
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 26px;
+  }
+  
+  .underline {
+    width: 68px;
+  }
+  
+  #form_button {
+    padding: 15px 25px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 18px;
+  }
+  
+  .icon {
+    height: 35px;
+    width: 35px;
+  }
+  
+  .underline {
+    width: 53px;
+  }
+  
+  input[type='text'], [type='email'], select, textarea {
+    font-size: 0.875em;
+  }
+}
+
+
+
+/* Slide */
+.slide-container {
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    margin-top: 40px;
+}
+
+.slide {
+    flex: 1;
+    padding: 20px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+footer {
+  text-align: center;
+  padding: 2px;
+  background: #F2F3EB;
+  font-size: 2px;
+}
+
+.social-icons a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 40px;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+/* Cores específicas para cada rede social */
+.instagram {
+  color: #E4405F;
+}
+
+.twitter {
+  color: #1DA1F2;
+}
+
+.facebook {
+  color: #1877F2;
+}
+
+.onedrive {
+  color: #0078D4;
+}
+
+
+/* Estilo para a seção do WhatsApp */
+.whatsapp-section {
+  background: #F2F3EB;
+  color: rgb(0, 0, 0);  /* Cor do texto */
+  padding: 20px;
+  border-radius: 10px;  /* Bordas arredondadas */
+  text-align: center;  /* Centraliza o conteúdo */
+  margin: 20px 0;  /* Margem para separar de outros elementos */
+}
+
+/* Estilo para o parágrafo */
+.whatsapp-section p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Estilo para o link */
+.whatsapp-section a {
+  color: white;  /* Cor do texto do link */
+  text-decoration: none;  /* Remove o sublinhado do link */
+  font-size: 20px;  /* Tamanho da fonte do link */
+  font-weight: bold;
+  display: inline-flex;  /* Flexbox para alinhar o ícone com o texto */
+  align-items: center;  /* Alinha o ícone e o texto verticalmente */
+  gap: 10px;  /* Espaço entre o ícone e o texto */
+  padding: 10px 20px;  /* Espaçamento interno do link */
+  background: #bcc487;
+  border-radius: 5px;  /* Bordas arredondadas */
+  transition: background-color 0.3s ease, transform 0.2s ease;  /* Transições suaves */
+}
+
+/* Estilo para o ícone */
+.whatsapp-section a i {
+  font-size: 24px;  /* Tamanho do ícone */
+}
+
+/* Efeito de hover no link */
+.whatsapp-section a:hover {
+  background: #F2F3EB;
+  transform: scale(1.05);  /* Efeito de aumentar o link */
+}
