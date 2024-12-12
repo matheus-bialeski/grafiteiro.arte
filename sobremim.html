@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,8 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SOBRE MIM</title>
   <link rel="icon" type="image/png" href="./img/Agrupar 123.png" />
+
   <link rel="stylesheet" href="sobre.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Adicionando a biblioteca do EmailJS -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init('EaqpqiR-iPXOPJT27'); // Initialize com seu user ID
+    })();
+  </script>
 </head>
 <body>
   <header class="header">
@@ -14,14 +23,15 @@
       <ul class="nav-links">
         <li><a href="principal.html">HOME</a></li>
         <li><a href="artes.html">MINHAS ARTES</a></li>
-        <li><a href="contato.html">CONTATO</a></li>
+        <li><a href="artes.html">CONTATO</a></li>
       </ul>
     </nav>
     <div class="social-links">
       <a href="https://www.behance.com/mbialeski" aria-label="Behance" target="_blank">
         <i class="fab fa-behance"></i>
       </a>
-      <a href="https://www.instagram.com/mbialeski?igsh=MTBqMjFraWhhNnc4Zw==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      
+            <a href="https://www.instagram.com/mbialeski?igsh=MTBqMjFraWhhNnc4Zw==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
     </div>
   </header>
 
@@ -62,11 +72,7 @@
     <h1> F A Ç A &nbsp;&nbsp;S U A <br> C U S T U M I Z A Ç Ã O</h1>
     <div class="underline"></div>
 
-    <form action="https://formsubmit.co/mathbialeski@gmail.com" method="POST" id="contact_form">
-      <input type="hidden" name="_next" value="https://seusite.com/obrigado"> <!-- Redireciona após envio -->
-      <input type="hidden" name="_subject" value="Novo contato pelo portfólio">
-      <input type="hidden" name="_captcha" value="false">
-
+    <form action="#" method="post" id="contact_form">
       <div class="name">
         <label for="name"></label>
         <input type="text" placeholder="MEU NOME É" name="name" id="name_input" required>
@@ -99,6 +105,12 @@
           </div>
         </div>
       </div>
+      <div class="image">
+        <label for="image">Escolha a imagem:</label>
+        <input type="file" name="image" id="image_input" accept="image/*" required>
+        <label for="image_input" class="custom-file-upload">Escolher Arquivo</label>
+        <span id="file-name">Nenhum arquivo escolhido</span>
+      </div>
 
       <div class="message">
         <label for="message"></label>
@@ -121,6 +133,19 @@
       } else {
         otherInputDiv.style.display = 'none';
       }
+    });
+
+    // Função para enviar o formulário usando EmailJS
+    document.getElementById('contact_form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Previne o envio padrão
+
+      const formData = new FormData(this);
+      emailjs.sendForm('service_8h2eqoi', 'template_wkedd8c', formData)
+        .then(function(response) {
+          alert('Mensagem enviada com sucesso!');
+        }, function(error) {
+          alert('Falha ao enviar a mensagem. Tente novamente!');
+        });
     });
   </script>
 
